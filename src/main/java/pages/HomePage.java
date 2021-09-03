@@ -15,7 +15,8 @@ private SelenideElement searchBar=$(By.xpath(".//*[@class='react-autosuggest__in
 private SelenideElement searchResults=$(By.xpath(".//*[@class='search__StyledResultsList-sc-1bms9wx-1 dacJbQ marked-content']"));
 private SelenideElement cookiesPopUp=$(By.xpath(".//*[@class='Button__ButtonBase-sc-1660rwk-0 Button-sc-1660rwk-1 UserConsent__StyledButton-tctmop-10 fYNGYG required statistic personalized']"));
 private SelenideElement searchButton=$(By.xpath(".//*[@type='submit']"));
-    public boolean search(String searchQuery) throws IOException {
+private SelenideElement firstSearchResultElement=$(By.xpath(".//*[@class='search__StyledResultsList-sc-1bms9wx-1 dacJbQ marked-content']//child::li[1]//a//h2"));
+    public String search(String searchQuery) throws IOException {
 
 
         //Eyes eyes=new Eyes();
@@ -25,7 +26,7 @@ private SelenideElement searchButton=$(By.xpath(".//*[@type='submit']"));
         //BufferedImage img= ImageIO.read(new File("test-results/reports/baseScreenshots/searchResults.jpg"));
         open(Configuration.baseUrl);
         if(cookiesPopUp.is(Condition.visible)){
-            cookiesPopUp.shouldBe(Condition.visible).click();
+            cookiesPopUp.click();
         }
         //cookiesPopUp.shouldBe(Condition.visible).click();
         searchField.click();
@@ -36,7 +37,9 @@ private SelenideElement searchButton=$(By.xpath(".//*[@type='submit']"));
         //eyes.check("visual validation for bonify", Target.image(img));
         //eyes.checkImage(img);
        // screenshot("searchResults");
-        return searchResults.is(Condition.visible);
+
+       // return searchResults.is(Condition.visible);
+        return firstSearchResultElement.getText();
 
     }
 }

@@ -2,24 +2,24 @@
 <testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2021-09-02T17:43:52 AST" name="Tests" finished-at="2021-09-02T17:44:13 AST" duration-ms="20842">
+  <suite started-at="2021-09-03T12:47:29 AST" name="Tests" finished-at="2021-09-03T12:47:50 AST" duration-ms="21189">
     <groups>
     </groups>
-    <test started-at="2021-09-02T17:43:52 AST" name="Command line test" finished-at="2021-09-02T17:44:13 AST" duration-ms="20842">
+    <test started-at="2021-09-03T12:47:29 AST" name="Command line test" finished-at="2021-09-03T12:47:50 AST" duration-ms="21189">
       <class name="Tests">
-        <test-method is-config="true" signature="setup()[pri:0, instance:Tests@776a6d9b]" started-at="2021-09-02T17:43:53 AST" name="setup" finished-at="2021-09-02T17:43:53 AST" duration-ms="42" status="PASS">
+        <test-method is-config="true" signature="setup()[pri:0, instance:Tests@776a6d9b]" started-at="2021-09-03T12:47:29 AST" name="setup" finished-at="2021-09-03T12:47:29 AST" duration-ms="30" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="loginValidation()[pri:0, instance:Tests@776a6d9b]" started-at="2021-09-02T17:43:53 AST" name="loginValidation" finished-at="2021-09-02T17:44:07 AST" duration-ms="14693" status="PASS">
+        <test-method signature="loginValidation()[pri:0, instance:Tests@776a6d9b]" started-at="2021-09-03T12:47:29 AST" name="loginValidation" finished-at="2021-09-03T12:47:44 AST" duration-ms="14574" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loginValidation -->
-        <test-method signature="testSearch()[pri:0, instance:Tests@776a6d9b]" started-at="2021-09-02T17:44:07 AST" name="testSearch" finished-at="2021-09-02T17:44:13 AST" duration-ms="5607" status="PASS">
+        <test-method signature="searchValidation()[pri:0, instance:Tests@776a6d9b]" started-at="2021-09-03T12:47:44 AST" name="searchValidation" finished-at="2021-09-03T12:47:50 AST" duration-ms="5886" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testSearch -->
-        <test-method is-config="true" signature="quiet()[pri:0, instance:Tests@776a6d9b]" started-at="2021-09-02T17:44:13 AST" name="quiet" finished-at="2021-09-02T17:44:13 AST" duration-ms="444" status="PASS">
+        </test-method> <!-- searchValidation -->
+        <test-method is-config="true" signature="quiet()[pri:0, instance:Tests@776a6d9b]" started-at="2021-09-03T12:47:50 AST" name="quiet" finished-at="2021-09-03T12:47:50 AST" duration-ms="643" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- quiet -->

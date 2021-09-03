@@ -35,10 +35,6 @@ UserDashBoardScreen userDashBoardScreen=new UserDashBoardScreen();
         Configuration.reportsFolder="test-results/reports/screenshots";
         //ScreenShooter.captureSuccessfulTests = true;
         Configuration.browser="Chrome";
-
-
-
-
         Configuration.baseUrl="https://www.bonify.de";
         Configuration.startMaximized=true;
     }
@@ -46,7 +42,9 @@ UserDashBoardScreen userDashBoardScreen=new UserDashBoardScreen();
 
     @Test
     public void searchValidation() throws IOException {
-        Assert.assertTrue(homePage.search("bonify"));
+        String searchKeyWord=(String) testDataJsonObject.get("searchQuery");
+        String searchResultValidation=(String) testDataJsonObject.get("firstSearchResultText");
+        Assert.assertTrue(homePage.search(searchKeyWord).contains(searchResultValidation));
     }
 
    @Test

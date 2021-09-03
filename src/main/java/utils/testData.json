@@ -2,6 +2,7 @@
   "userName": "qatest+sp10p@bonify.de",
   "password": "passwordQA5#",
   "expectedWelcomeMessageAfterLogin": "Hey uno",
-  "searchQuery": "bonify"
+  "searchQuery": "bonify",
+  "firstSearchResultText": "Sitemap:"
 
 }

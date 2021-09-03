@@ -31,9 +31,7 @@ public class UserDashBoardScreen {
 
     }
 
-    public void logout(){
 
-    }
 
 
 }
