@@ -1,30 +1,25 @@
-import com.applitools.eyes.RectangleSize;
-import com.applitools.eyes.images.Eyes;
+
+import apis.Search;
 import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.Selenide;
-import netscape.javascript.JSObject;
 import org.json.simple.JSONObject;
 import org.junit.Assert;
-import org.testng.annotations.AfterTest;
+import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 import pages.HomePage;
-import pages.UserDashBoardScreen;
+import pages.UserDashBoardPage;
 import utils.TestData;
 
 import java.io.IOException;
 
-import static com.codeborne.selenide.Selenide.open;
-import static com.codeborne.selenide.Selenide.updateHash;
 
 public class Tests {
-
-    Eyes eyes=new Eyes();
-
 HomePage homePage=new HomePage();
-UserDashBoardScreen userDashBoardScreen=new UserDashBoardScreen();
+UserDashBoardPage userDashBoardScreen=new UserDashBoardPage();
     TestData data=new TestData();
     JSONObject testDataJsonObject;
+    Search searchViaApi=new Search();
 
 
     @BeforeClass
@@ -33,21 +28,25 @@ UserDashBoardScreen userDashBoardScreen=new UserDashBoardScreen();
         Configuration.timeout=20000;
         Configuration.pageLoadTimeout=20000;
         Configuration.reportsFolder="test-results/reports/screenshots";
-        //ScreenShooter.captureSuccessfulTests = true;
         Configuration.browser="Chrome";
         Configuration.baseUrl="https://www.bonify.de";
         Configuration.startMaximized=true;
     }
 
-
     @Test
-    public void searchValidation() throws IOException {
+    public void searchValidationViaAPI(){
+        String searchKeyWord=(String) testDataJsonObject.get("searchQuery");
+        org.testng.Assert.assertTrue(searchViaApi.searchViaApi(searchKeyWord).getStatusCode()==200);
+    }
+
+    @Test(priority = 1)
+    public void searchValidationViaPage() throws IOException {
         String searchKeyWord=(String) testDataJsonObject.get("searchQuery");
         String searchResultValidation=(String) testDataJsonObject.get("firstSearchResultText");
         Assert.assertTrue(homePage.search(searchKeyWord).contains(searchResultValidation));
     }
 
-   @Test
+   @Test(priority = 2)
     public void loginValidation(){
         String userName= (String) testDataJsonObject.get("userName");
         String password=(String) testDataJsonObject.get("password");
@@ -57,8 +56,10 @@ UserDashBoardScreen userDashBoardScreen=new UserDashBoardScreen();
 
 
 
-    @AfterTest
+
+    @AfterClass
     public void quiet(){
         Selenide.closeWindow();
+
     }
 }

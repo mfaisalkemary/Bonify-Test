@@ -11,7 +11,7 @@ Please install below :
 
 2-Maven version: 3.6.3_1
 
-3-Chrome browser version: 91.0.4472.114
+3-Chrome browser version: 92.0.4515.159
 
 
 How to run the test:
@@ -37,12 +37,15 @@ project_root_dir/test-results/reports
 
 Where to find the test code , test data and  pages classes:
 -------------------------------------------------------
-1-pages classes
+1-pages classes  
 Pages : project_root_dir/src/main/java/pages/*.class
 
-2-tests classes
-Test calss : project_root_dir/test/java/Tests.class
+2-apis classes:  
+project_root_dir/src/main/java/apis
+
+2-tests classes:  
+project_root_dir/test/java/Tests.class
 
 3-test data files and utils :
-utils : project_root_dir/src/main/java/utils/TestData.class
+utils : project_root_dir/src/main/java/utils/TestData.class  
 test data file : project_root_dir/src/main/java/utils/testData.json

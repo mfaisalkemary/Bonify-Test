@@ -1,3 +1,4 @@
-pages\UserDashBoardScreen.class
+pages\UserDashBoardPage.class
 utils\TestData.class
+apis\Search.class
 pages\HomePage.class

@@ -1,25 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
+<testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2021-09-03T12:47:29 AST" name="Tests" finished-at="2021-09-03T12:47:50 AST" duration-ms="21189">
+  <suite started-at="2021-09-03T14:35:19 AST" name="Tests" finished-at="2021-09-03T14:35:50 AST" duration-ms="31426">
     <groups>
     </groups>
-    <test started-at="2021-09-03T12:47:29 AST" name="Command line test" finished-at="2021-09-03T12:47:50 AST" duration-ms="21189">
+    <test started-at="2021-09-03T14:35:19 AST" name="Command line test" finished-at="2021-09-03T14:35:50 AST" duration-ms="31426">
       <class name="Tests">
-        <test-method is-config="true" signature="setup()[pri:0, instance:Tests@776a6d9b]" started-at="2021-09-03T12:47:29 AST" name="setup" finished-at="2021-09-03T12:47:29 AST" duration-ms="30" status="PASS">
+        <test-method is-config="true" signature="setup()[pri:0, instance:Tests@670002]" started-at="2021-09-03T14:35:19 AST" name="setup" finished-at="2021-09-03T14:35:19 AST" duration-ms="49" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="loginValidation()[pri:0, instance:Tests@776a6d9b]" started-at="2021-09-03T12:47:29 AST" name="loginValidation" finished-at="2021-09-03T12:47:44 AST" duration-ms="14574" status="PASS">
+        <test-method signature="searchValidationViaAPI()[pri:0, instance:Tests@670002]" started-at="2021-09-03T14:35:19 AST" name="searchValidationViaAPI" finished-at="2021-09-03T14:35:25 AST" duration-ms="6153" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- searchValidationViaAPI -->
+        <test-method signature="searchValidationViaPage()[pri:1, instance:Tests@670002]" started-at="2021-09-03T14:35:25 AST" name="searchValidationViaPage" finished-at="2021-09-03T14:35:39 AST" duration-ms="13847" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- searchValidationViaPage -->
+        <test-method signature="loginValidation()[pri:2, instance:Tests@670002]" started-at="2021-09-03T14:35:39 AST" name="loginValidation" finished-at="2021-09-03T14:35:50 AST" duration-ms="10684" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loginValidation -->
-        <test-method signature="searchValidation()[pri:0, instance:Tests@776a6d9b]" started-at="2021-09-03T12:47:44 AST" name="searchValidation" finished-at="2021-09-03T12:47:50 AST" duration-ms="5886" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- searchValidation -->
-        <test-method is-config="true" signature="quiet()[pri:0, instance:Tests@776a6d9b]" started-at="2021-09-03T12:47:50 AST" name="quiet" finished-at="2021-09-03T12:47:50 AST" duration-ms="643" status="PASS">
+        <test-method is-config="true" signature="quiet()[pri:0, instance:Tests@670002]" started-at="2021-09-03T14:35:50 AST" name="quiet" finished-at="2021-09-03T14:35:50 AST" duration-ms="558" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- quiet -->

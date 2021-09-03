@@ -34,6 +34,7 @@
             <version>7.3.0</version>
             <scope>test</scope>
         </dependency>
+
         <dependency>
             <groupId>org.testng</groupId>
             <artifactId>testng</artifactId>
@@ -76,23 +77,6 @@
             <artifactId>json-simple</artifactId>
             <version>1.1.1</version>
         </dependency>
-
-        <dependency>
-            <groupId>com.applitools</groupId>
-            <artifactId>eyes-images-java3</artifactId>
-            <version>RELEASE</version>
-        </dependency>
-
-
-<!--        <dependencies>-->
-<!--            &lt;!&ndash; This is the Applitools Selenium for Java SDK &ndash;&gt;-->
-<!--            <dependency>-->
-<!--                <groupId>com.applitools</groupId>-->
-<!--                <artifactId>eyes-selenium-java3</artifactId>-->
-<!--                <version>RELEASE</version>-->
-<!--            </dependency>-->
-<!--        </dependencies>-->
-
 
     </dependencies>
 </project>
