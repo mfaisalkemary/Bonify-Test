@@ -33,7 +33,7 @@ jobs:
       
       
       - name: step4- navigate to the directory of the generated test automation report file 
-        run: cd target/surefire-reports/
+        run: cd target/surefire-reports
          
       - name: step5- uploading the test automation report file to GitHub
         uses: actions/upload-artifact@v2
