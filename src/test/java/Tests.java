@@ -30,7 +30,7 @@ UserDashBoardPage userDashBoardScreen=new UserDashBoardPage();
         Configuration.pageLoadTimeout=20000;
         Configuration.reportsFolder="test-results/reports/screenshots";
         Configuration.browser="Firefox";
-        Configuration.headless=false;
+        Configuration.headless=true;
         Configuration.baseUrl="https://www.bonify.de";
         Configuration.startMaximized=true;
 
