@@ -9,7 +9,7 @@ import static com.codeborne.selenide.Selenide.*;
 
 public class HomePage {
 private SelenideElement searchField= $(By.xpath("//*[@id=\"content-frame\"]/div/div[2]/nav/ul[1]/li[6]/a"));
-private SelenideElement searchBar=$(By.xpath(".//*[@class='react-autosuggest__input']"));
+private SelenideElement searchBar=$(By.xpath("/html/body/div[1]/div/div/div[3]/div/section/form/div/input"));
 private SelenideElement searchResults=$(By.xpath(".//*[@class='search__StyledResultsList-sc-1bms9wx-1 dacJbQ marked-content']"));
 private SelenideElement cookiesPopUp=$(By.xpath(".//*[@class='Button__ButtonBase-sc-1660rwk-0 Button-sc-1660rwk-1 UserConsent__StyledButton-tctmop-10 fYNGYG required statistic personalized']"));
 private SelenideElement searchButton=$(By.xpath(".//*[@type='submit']"));

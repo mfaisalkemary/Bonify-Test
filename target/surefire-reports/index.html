@@ -26,7 +26,7 @@
       <span class="top-banner-title-font">Test results</span>
       <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
       <br/>
-      <span class="top-banner-font-1">1 suite, 1 failed test</span>
+      <span class="top-banner-font-1">1 suite</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -40,7 +40,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" panel-name="suite-Tests" class="navigator-link">
-              <span class="suite-name border-failed">Tests</span>
+              <span class="suite-name border-passed">Tests</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -93,21 +93,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">3 methods, 1 failed,   2 passed</span>
-                  </li>
-                  <li>
-                    <span class="method-list-title failed">Failed methods</span>
-                    <span class="show-or-hide-methods failed">
-                      <a href="#" panel-name="suite-Tests" class="hide-methods failed suite-Tests"> (hide)</a> <!-- hide-methods failed suite-Tests -->
-                      <a href="#" panel-name="suite-Tests" class="show-methods failed suite-Tests"> (show)</a> <!-- show-methods failed suite-Tests -->
-                    </span>
-                    <div class="method-list-content failed suite-Tests">
-                      <span>
-                        <img src="failed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Tests" title="Tests" class="method navigator-link" hash-for-method="loginValidation">loginValidation</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                    </div> <!-- method-list-content failed suite-Tests -->
+                    <span class="method-stats">3 methods,   3 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -116,6 +102,11 @@
                       <a href="#" panel-name="suite-Tests" class="show-methods passed suite-Tests"> (show)</a> <!-- show-methods passed suite-Tests -->
                     </span>
                     <div class="method-list-content passed suite-Tests">
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Tests" title="Tests" class="method navigator-link" hash-for-method="loginValidation">loginValidation</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
                         <a href="#" panel-name="suite-Tests" title="Tests" class="method navigator-link" hash-for-method="searchValidationViaAPI">searchValidationViaAPI</a> <!-- method navigator-link -->
@@ -138,9 +129,9 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Tests" class="panel Tests">
-          <div class="suite-Tests-class-failed">
+          <div class="suite-Tests-class-passed">
             <div class="main-panel-header rounded-window-top">
-              <img src="failed.png"/>
+              <img src="passed.png"/>
               <span class="class-name">Tests</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
@@ -149,60 +140,8 @@
                   <a name="loginValidation">
                   </a> <!-- loginValidation -->
                   <span class="method-name">loginValidation</span>
-                  <div class="stack-trace">Element not found {By.xpath: //*[@id=&quot;loginId&quot;]}
-Expected: visible or transparent: visible or have css value opacity=0
-Page source: file:/D:/Interviews/bonify/code/Bonify-Test/test-results/reports/screenshots/1630761824866.0.html
-Timeout: 20 s.
-Caused by: NoSuchWindowException: no such window: target window already closed
-	at com.codeborne.selenide.impl.WebElementSource.createElementNotFoundError(WebElementSource.java:83)
-	at com.codeborne.selenide.impl.ElementFinder.createElementNotFoundError(ElementFinder.java:130)
-	at com.codeborne.selenide.impl.WebElementSource.checkCondition(WebElementSource.java:114)
-	at com.codeborne.selenide.impl.WebElementSource.findAndAssertElementIsInteractable(WebElementSource.java:139)
-	at com.codeborne.selenide.commands.SetValue.execute(SetValue.java:36)
-	at com.codeborne.selenide.commands.SetValue.execute(SetValue.java:17)
-	at com.codeborne.selenide.commands.Commands.execute(Commands.java:155)
-	at com.codeborne.selenide.impl.SelenideElementProxy.dispatchAndRetry(SelenideElementProxy.java:133)
-	at com.codeborne.selenide.impl.SelenideElementProxy.invoke(SelenideElementProxy.java:85)
-	at com.sun.proxy.$Proxy6.setValue(Unknown Source)
-	at pages.UserDashBoardPage.loginUser(UserDashBoardPage.java:22)
-	at Tests.loginValidation(Tests.java:60)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-Caused by: org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
-from unknown error: web view not found
-  (Session info: chrome=92.0.4515.159)
-Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
-System info: host: &apos;N12663&apos;, ip: &apos;172.27.208.1&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;15.0.2&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: true, browserName: chrome, browserVersion: 92.0.4515.159, chrome: {chromedriverVersion: 92.0.4515.107 (87a818b10553..., userDataDir: C:\Users\MALKAM~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:49157}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: 1a1e673b6d41f50a83b181054c6d2c6e
-*** Element info: {Using=xpath, value=//*[@id=&quot;loginId&quot;]}
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
-	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
-	at com.codeborne.selenide.impl.WebElementSelector.findElement(WebElementSelector.java:59)
-	at com.codeborne.selenide.impl.WebElementSelector.findElement(WebElementSelector.java:34)
-	at com.codeborne.selenide.impl.ElementFinder.getWebElement(ElementFinder.java:103)
-	at com.codeborne.selenide.impl.WebElementSource.checkCondition(WebElementSource.java:99)
-	... 46 more
-... Removed 40 stack frames
-</div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
-            </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Tests-class-failed -->
-          <div class="suite-Tests-class-passed">
-            <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
-              <span class="class-name">Tests</span>
-            </div> <!-- main-panel-header rounded-window-top -->
-            <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
                   <a name="searchValidationViaAPI">
@@ -272,22 +211,22 @@ data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
 data.addRows(3);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'loginValidation')
+data.setCell(0, 1, 'searchValidationViaPage')
 data.setCell(0, 2, 'Tests')
-data.setCell(0, 3, 21079);
+data.setCell(0, 3, 21534);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'searchValidationViaPage')
+data.setCell(1, 1, 'loginValidation')
 data.setCell(1, 2, 'Tests')
-data.setCell(1, 3, 12547);
+data.setCell(1, 3, 12837);
 data.setCell(2, 0, 2)
 data.setCell(2, 1, 'searchValidationViaAPI')
 data.setCell(2, 2, 'Tests')
-data.setCell(2, 3, 4790);
+data.setCell(2, 3, 4964);
 window.suiteTableData['Tests']= { tableData: data, tableDiv: 'times-div-Tests'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 38 seconds</span>
+              <span class="suite-total-time">Total running time: 39 seconds</span>
               <div id="times-div-Tests">
               </div> <!-- times-div-Tests -->
             </div> <!-- times-div -->
@@ -320,23 +259,19 @@ return data;
               </div> <!-- configuration-class before -->
               <div class="test-method">
                 <span class="method-name">searchValidationViaAPI</span>
-                <span class="method-start">57 ms</span>
+                <span class="method-start">70 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">searchValidationViaPage</span>
-                <span class="method-start">4853 ms</span>
+                <span class="method-start">5042 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
-                <img src="failed.png">
-                </img>
                 <span class="method-name">loginValidation</span>
-                <span class="method-start">17401 ms</span>
+                <span class="method-start">26577 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-class after">
-                <img src="failed.png">
-                </img>
                 <span class="method-name">quiet</span>
-                <span class="method-start">38495 ms</span>
+                <span class="method-start">39418 ms</span>
               </div> <!-- configuration-class after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
