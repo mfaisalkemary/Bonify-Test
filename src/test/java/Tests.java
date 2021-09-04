@@ -34,6 +34,7 @@ UserDashBoardPage userDashBoardScreen=new UserDashBoardPage();
 //        options.addArguments("--no-sandbox");
         Configuration.browserCapabilities.setCapability(String.valueOf(options),"--no-sandbox");
         Configuration.browserCapabilities.setCapability("--disable-extensions",false);
+        Configuration.headless=true;
         Configuration.baseUrl="https://www.bonify.de";
         Configuration.startMaximized=true;
 
