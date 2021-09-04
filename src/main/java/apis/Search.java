@@ -16,7 +16,7 @@ public class Search {
         RequestSpecification specification=builder.build();
         specification.queryParam("s",searchKeyWord);
         Response response=given().spec(specification).get("/suche");
-        response.then().log().body();
+        response.then().log().headers();
         return response;
 
     }

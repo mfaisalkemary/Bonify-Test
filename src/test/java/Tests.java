@@ -4,6 +4,7 @@ import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.Selenide;
 import org.json.simple.JSONObject;
 import org.junit.Assert;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
@@ -29,8 +30,11 @@ UserDashBoardPage userDashBoardScreen=new UserDashBoardPage();
         Configuration.pageLoadTimeout=20000;
         Configuration.reportsFolder="test-results/reports/screenshots";
         Configuration.browser="Chrome";
+        ChromeOptions options = new ChromeOptions();
+        options.addArguments("--no-sandbox");
         Configuration.baseUrl="https://www.bonify.de";
         Configuration.startMaximized=true;
+
     }
 
     @Test
