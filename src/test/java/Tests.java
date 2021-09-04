@@ -2,6 +2,7 @@
 import apis.Search;
 import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.Selenide;
+import com.codeborne.selenide.testng.ScreenShooter;
 import org.json.simple.JSONObject;
 import org.junit.Assert;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -29,6 +30,7 @@ UserDashBoardPage userDashBoardScreen=new UserDashBoardPage();
         Configuration.timeout=20000;
         Configuration.pageLoadTimeout=20000;
         Configuration.reportsFolder="test-results/reports/screenshots";
+        ScreenShooter.captureSuccessfulTests = true;
         Configuration.browser="Firefox";
         Configuration.headless=true;
         Configuration.baseUrl="https://www.bonify.de";
