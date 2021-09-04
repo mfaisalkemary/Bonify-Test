@@ -18,24 +18,29 @@ jobs:
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-      - name: step1-cheking out the master branch of Bonify-Test
+      - name: step1- cheking out the master branch of Bonify-Test
         uses: actions/checkout@v2
 
       # Runs a single command using the runners shell
-      - name: step2-install JDK 1.8
+      - name: step2- environment preparation  
         uses: actions/setup-java@v1
         with:
           java-version: 1.8
           
           
-      - name: step3-run automated tests 
+      - name: step3- run automated tests 
         run: mvn clean test --file pom.xml
       
       
-      - name: step4-view test automation report
-        run: |
-         cd target
-         ls -a
+      - name: step4- navigate to the directory of the generated test automation report file 
+        run: cd target/surefire-reports/emailable-report.html
+         
+      - name: step5- uploading the test automation report file to GitHub
+        uses: actions/upload-artifact@v2
+        with: 
+           name: test-automation-report
+           path: downloads
+         
         
 
  
