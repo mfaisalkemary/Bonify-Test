@@ -30,9 +30,10 @@ UserDashBoardPage userDashBoardScreen=new UserDashBoardPage();
         Configuration.pageLoadTimeout=20000;
         Configuration.reportsFolder="test-results/reports/screenshots";
         Configuration.browser="Chrome";
-//        ChromeOptions options = new ChromeOptions();
+        ChromeOptions options = new ChromeOptions();
 //        options.addArguments("--no-sandbox");
-        Configuration.browserCapabilities.setCapability("ChromeOptions","--no-sandbox");
+        Configuration.browserCapabilities.setCapability(String.valueOf(options),"--no-sandbox");
+        Configuration.browserCapabilities.setCapability("--disable-extensions",false);
         Configuration.baseUrl="https://www.bonify.de";
         Configuration.startMaximized=true;
 
